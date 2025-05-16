@@ -14,8 +14,10 @@ import tensorflow as tf
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from keras.datasets import imdb
+from tensorflow.keras import backend as K
 
 
+K.clear_session()  # Reset name scopes and model states
 
 # Load the pre-trained model from local path
 model = load_model('SimpleRNN_IMDB_Model.h5')
